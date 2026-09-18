@@ -1,149 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indian Silambam Association - Registration</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="background-overlay"></div>
-    
-    <div class="container">
-        <!-- Header Section -->
-        <header class="header">
-            <div class="logo-container">
-                <img src="images/silambam-logo.png" alt="Silambam Logo" class="logo" id="logo-img" onerror="this.style.display='none'">
-            </div>
-            <h1 class="main-heading">INDIAN SILAMBAM ASSOCIATION</h1>
-            <p class="sub-heading">Martial Arts Registration</p>
-        </header>
-
-        <!-- Registration Form -->
-        <form id="registrationForm" class="registration-form">
-            <div class="form-group">
-                <label for="firstName">First Name <span class="required">*</span></label>
-                <input type="text" id="firstName" name="firstName" required>
-            </div>
-
-            <div class="form-group">
-                <label for="secondName">Second Name <span class="required">*</span></label>
-                <input type="text" id="secondName" name="secondName" required>
-            </div>
-
-            <div class="form-group">
-                <label for="dateOfBirth">Date of Birth <span class="required">*</span></label>
-                <input type="date" id="dateOfBirth" name="dateOfBirth" required>
-            </div>
-
-            <div class="form-group">
-                <label for="address">Address <span class="required">*</span></label>
-                <textarea id="address" name="address" rows="3" required></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="district">District <span class="required">*</span></label>
-                <select id="district" name="district" required>
-                    <option value="">Select District</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="state">State <span class="required">*</span></label>
-                <select id="state" name="state" required>
-                    <option value="">Select State</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="country">Country <span class="required">*</span></label>
-                <select id="country" name="country" required>
-                    <option value="">Select Country</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="phoneNumber">Phone Number <span class="required">*</span></label>
-                <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" placeholder="Enter 10-digit phone number" required>
-                <span class="error-message" id="phoneNumberError"></span>
-            </div>
-
-            <div class="form-group">
-                <label for="teamName">Team Name <span class="required">*</span></label>
-                <input type="text" id="teamName" name="teamName" required>
-                <span class="error-message" id="teamNameError"></span>
-            </div>
-
-            <div class="form-group">
-                <label for="photo">Upload Passport Size Photo <span class="required">*</span></label>
-                <input type="file" id="photo" name="photo" accept="image/*" required>
-                <div class="photo-preview" id="photoPreview"></div>
-            </div>
-
-            <button type="submit" class="submit-btn">Register</button>
-        </form>
-
-        <!-- Founder Section -->
-        <footer class="founder-section">
-            <div class="founder-content">
-                <img src="images/founder.jpg" alt="Founder" class="founder-image" id="founder-img" onerror="this.style.display='none'">
-                <div class="founder-text">
-                    <h3>FOUNDER OF INDIAN SILAMBAM ASSOCIATION</h3>
-                    <p>MASTER C.ARUMUGAM D.M.E</p>
-                    <p>BLACK BELT 7TH DAN</p>
-                    <p>BHEESHMAR SILAMBAM KARATE AND YOGA ACADEMY</p>
-                    <p>ARANTHANGI</p>
-                </div>
-            </div>
-        </footer>
-    </div>
-
-    <!-- Identity Card Page (Hidden initially) -->
-    <div id="idCardPage" class="id-card-page hidden">
-        <div class="id-card-container">
-            <div class="id-card" id="idCard">
-                <div class="id-card-header">
-                    <img src="images/silambam-logo.png" alt="Silambam Logo" class="id-card-logo" id="id-card-logo" onerror="this.style.display='none'">
-                    <h2>INDIAN SILAMBAM ASSOCIATION</h2>
-                </div>
-                <div class="id-card-body">
-                    <div class="id-card-photo">
-                        <img id="idCardPhoto" src="" alt="Member Photo">
-                    </div>
-                    <div class="id-card-details">
-                        <div class="detail-row">
-                            <span class="label">Name:</span>
-                            <span class="value" id="idCardName"></span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="label">Address:</span>
-                            <span class="value" id="idCardAddress"></span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="label">Phone Number:</span>
-                            <span class="value" id="idCardPhone"></span>
-                        </div>
-                        <div class="detail-row">
-                            <span class="label">Team Name:</span>
-                            <span class="value" id="idCardTeam"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="id-card-footer">
-                    <img src="images/founder-signature.png" alt="Founder Signature" class="founder-signature" id="founder-signature" onerror="this.style.display='none'">
-                    <p>Founder's Signature</p>
-                </div>
-            </div>
-            <div class="id-card-actions">
-                <button onclick="downloadPDF()" class="download-btn">Download Identity Card (PDF)</button>
-                <button onclick="goBack()" class="back-btn">Back to Registration</button>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="script.js"></script>
-</body>
-</html>
-
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sabari | Rubix Developer Portfolio</title><link rel="stylesheet" href="styles.css"></head>
+<body><header class="hero"><nav><div class="brand">SABARI<span>.</span></div><div class="company">RUBIX</div></nav>
+<div class="hero-content"><p class="eyebrow">RUBIX • DEVELOPER PORTFOLIO</p><h1>Building practical <span>AI & software</span> projects.</h1>
+<p class="intro">Developer portfolio of Sabari — focused on AI, Machine Learning, Computer Vision and Full-Stack Web Development.</p>
+<a class="button" href="#projects">View Projects</a></div></header>
+<main><section id="projects" class="section"><p class="eyebrow">SELECTED WORK</p><h2>Projects</h2><div class="grid">
+<article><div class="tag">FINAL YEAR PROJECT</div><h3>AI Exam Malpractice Detection</h3><p>Computer-vision based examination monitoring with configurable detection, risk events, student/admin workflow and reporting.</p><small>Python • YOLO • OpenCV • MediaPipe • Django REST • PostgreSQL</small></article>
+<article><div class="tag">MACHINE LEARNING</div><h3>Credit Card Default Prediction</h3><p>ML workflow for preprocessing financial data, training a classification model and serving predictions through a web application.</p><small>Python • Pandas • Scikit-learn • Flask</small></article>
+<article><div class="tag">MACHINE LEARNING</div><h3>House Price Prediction</h3><p>Regression web application using categorical encoding, train/test split and model evaluation.</p><small>Random Forest • One-Hot Encoding • MAE • R² • Joblib</small></article>
+<article><div class="tag">DATA SCIENCE</div><h3>Customer Churn Prediction</h3><p>Predictive analytics project for identifying customers who may leave a service.</p><small>Python • Pandas • Scikit-learn • Streamlit</small></article>
+<article><div class="tag">AI / WEB</div><h3>Smart AI College Chatbot</h3><p>College enquiry assistant designed to provide quick answers to common student questions.</p><small>AI • Python • HTML • CSS • JavaScript</small></article>
+</div></section><section class="about"><div><p class="eyebrow">PROFILE</p><h2>Sabari</h2><p>Developer at <strong>Rubix</strong>, building academic and practical software projects with a focus on AI/ML and web technologies.</p></div>
+<div class="facts"><b>Role</b><span>Developer</span><b>Company</b><span>Rubix</span><b>Focus</b><span>AI • ML • Full Stack</span></div></section></main>
+<footer>© 2026 Sabari • Rubix Developer Portfolio</footer><script src="script.js"></script></body></html>
